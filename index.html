@@ -2,7 +2,6 @@
 <html>
 <title>Hello Strapdown</title>
 <xmp id="docs" theme="united" style="display:none;">
-
 </xmp>
 <script src="js/jquery.js"></script>
 <script type="text/javascript">
@@ -11,8 +10,8 @@
 		tpl += msg;
 		tpl += '</xmp>';
 		$("#docs").html(msg);
-	});
 
+		$("body").apend('<script src="js/strapdown.js"></script>');
+	});
 </script>
-<script src="js/strapdown.js"></script>
 </html>
