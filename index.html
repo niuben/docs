@@ -2,18 +2,22 @@
 <html>
 <title>Front end</title>
 <body>
+<button>加载md</button>
 <xmp id="docs" theme="united" style="display:none;">
 </xmp>
 <script src="js/jquery.js"></script>
 <script type="text/javascript">
-	$.get("front-end/css.md",function(msg){
-		var tpl = '<xmp theme="united" style="display:none;">';
-		tpl += msg;
-		tpl += '</xmp>';
-		$("#docs").html(msg);
+	$("button").click(function(){
 
-		$("body").append('<script src="js\/strapdown.js"><\/script>');
-	});
+		$.get("front-end/css.md",function(msg){
+			var tpl = '<xmp theme="united" style="display:none;">';
+			tpl += msg;
+			tpl += '</xmp>';
+			$("#docs").html(msg);
+
+			$("body").append('<script src="js\/strapdown.js"><\/script>');
+		});
+	})
 </script>
 </body>
 </html>
