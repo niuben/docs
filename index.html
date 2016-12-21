@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html>
-<title>Front end</title>
+<head>
+	<title>知识体系</title>
+	<link rel="stylesheet" type="text/css" href="./reset.css">
+	<style type="text/css">
+		.content {			
+			width: 450px;
+			margin: 0 auto;
+			margin-top: 200px;
+		}	
+		dl {
+			float: left;
+			width: 150px;
+		}
+		dd, dt {
+			margin-top: 10px;
+		}
+		dd {
+			font-size: 14px;
+		}
+
+	</style>
+</head>
 <body>
-<button>加载md</button>
-<xmp id="docs" theme="united" style="display:none;">
-</xmp>
-<script src="js/jquery.js"></script>
-<script type="text/javascript">
-	$("button").click(function(){
-
-		$.get("front-end/css.md",function(msg){
-			var tpl = '<xmp theme="united" style="display:none;">';
-			tpl += msg;
-			tpl += '</xmp>';
-			$("#docs").html(msg);
-
-			$("body").append('<script src="js\/strapdown.js"><\/script>');
-		});
-	})
-</script>
+	<div class="content">		
+		<dl>
+			<dt>Web技术</dt>
+			<dd>Html</dd>
+			<dd>Css</dd>
+			<dd>Javascript</dd>
+			<dd>Node</dd>
+		</dl>
+		<dl>
+			<dt>Web 规范</dt>
+			<dd>组件规范</dd>
+			<dd>代码规范</dd>
+			<dd>测试规范</dd>
+		</dl>
+		
+		<dl>
+			<dt>Web 工程化</dt>
+			<dd>构建工具</dd>			
+		</dl>
+	</div>
 </body>
 </html>
