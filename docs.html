@@ -77,7 +77,9 @@
 	var url = "./web/" + type + "/catalog.json"; 
 	$.get(url, function(msg){
 		
-		msg = JSON.parse(msg);
+		if(typeof msg == "string"){
+			msg = JSON.parse(msg);
+		}		
 
 		//显示内容
 		var tpl = "";
@@ -109,7 +111,6 @@
 
 	function show(catalog){
 		var url = "./web/" + type + "/" + catalog + ".md";
-
 		$.get(url, function(msg){					
 			$(".container").html(markdown.toHTML(msg));
 		});
