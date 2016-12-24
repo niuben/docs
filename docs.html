@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
-<title>Front end</title>
-<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+<title>Css</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="./static/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="./static/css/github-markdown.css" />
 <style type="text/css">
 	html, body {
 		height: 100%;
@@ -18,46 +20,93 @@
 	.catalog h1 {
 		font-size: 20px;
 	}
+	.catalog ul {
+		margin-top: 20px;
+	}
+
 	.catalog ul li {
 		text-indent: 10px;
 		margin-top: 10px;
-		font-size: 14px;		
+		font-size: 14px;
+		list-style: none;
+		cursor: pointer;		
 	}
 
-	.content {
-		margin-left: 200px
+	.container {
+		margin-left: 200px;
+		padding-top: 5px;
 	}
 </style>
 <body>
+
 <!-- 目录页 -->
 <div class="catalog">
-	<h1>css</h2>
+	<!-- <h1>css</h2>
 	<ul>
 		<li>简介</li>
 		<li>流式布局</li>		
-	</ul>
+	</ul> -->
 </div>
 
 <!-- 文档页 -->
-<div class="content">
-	<xmp id="docs" theme="united" style="display:none;">
-		## css~
-	</xmp>	
+<div class="container markdown-body">
+<!-- <xmp id="docs" theme="united" style="display:none;" class="content">
+	## css
+</xmp> -->
 </div>
 
-<script src="js/jquery.js"></script>
+<script src="static/jquery.js"></script>
+<script src="static/markdown.js"></script>
 <script type="text/javascript">
+	//获取url query。如果没有跳转到首页
+	var query = location.search.substr(1, 100);
+	if(query == "") {
+		location.href = "./index.html"; 
+	}
+	
+	//获取文档类型,默认是第一个参数
+	var type = query.split("=")[1];
+	if(type == undefined){
+		location.href = "./index.html"; 	
+	}
 
-	$("button").click(function(){
+	//加载左侧菜单
+	var url = "./web/" + type + "/catalog.json"; 
+	$.get(url, function(msg){
+		
+		msg = JSON.parse(msg);
 
-		$.get("front-end/css.md",function(msg){
-			var tpl = '<xmp theme="united" style="display:none;">';
-			tpl += msg;
-			tpl += '</xmp>';
-			$("#docs").html(msg);
+		//显示内容
+		var tpl = "";
+		tpl += "<h1>" + msg.title + "</h1>";
+		tpl += "<ul>";
+		msg.list.map(function(name, index){
+			tpl += "<li>" + name + "</li>";
+		})
+		tpl += "</ul>";
+		$(".catalog").html(tpl);
+
+		//默认显示目录第一个内容
+		var catalog = $(".catalog ul li").first().text();
+		show(catalog);
+
+		//绑定点击事件
+		$(".catalog ul li").click(function(){
+			var catalog = $(this).text();
+			show(catalog);
 		});
-	})
+
+	});
+
+
+	function show(catalog){
+		var url = "./web/" + type + "/" + catalog + ".md";
+
+		$.get(url, function(msg){					
+			$(".container").html(markdown.toHTML(msg));
+		});
+	}
+	// })
 </script>
-<script src="js/strapdown.js"></script>
 </body>
 </html>

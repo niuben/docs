@@ -1,6 +1,6 @@
 {
-	title: "css",
-	list: [
+	"title": "css",
+	"list": [
 		"简介",
 		"流式布局"
 	]
