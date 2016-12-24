@@ -31,6 +31,9 @@
 		list-style: none;
 		cursor: pointer;		
 	}
+	.catalog ul li.on {
+		font-weight: bold;
+	}
 
 	.container {
 		margin-left: 200px;
@@ -87,11 +90,16 @@
 		$(".catalog").html(tpl);
 
 		//默认显示目录第一个内容
+		$(".catalog ul li").first().addClass("on");
 		var catalog = $(".catalog ul li").first().text();
 		show(catalog);
 
 		//绑定点击事件
 		$(".catalog ul li").click(function(){
+			
+			$(".catalog ul li").removeClass("on");
+			$(this).addClass("on");
+
 			var catalog = $(this).text();
 			show(catalog);
 		});
