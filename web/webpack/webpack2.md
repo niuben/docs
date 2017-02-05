@@ -15,13 +15,13 @@
 监听文件是否变化，一旦文件变化进行重新编译。
 
 #### watch 
-`_boolean_` 开启监听模式。
+_boolean_ 开启监听模式。
 
 #### watchOptio 
-`_object_` 自定义选项
+_object_ 自定义选项
 
 aggregateTimeout: _number_ 延迟编译的时间，可以避免频繁编译。单位是毫秒  
-`aggregateTimeout: 300 //默认是300毫秒`
+```aggregateTimeout: 300 //默认是300毫秒```
 
 ignored: 忽略对一些文件夹的监听。因为监听大量的文件夹会消耗大量CPU内存，特别是像`node_modules`这样巨大的文件夹。  
 `ignored: /node_modules/`  
