@@ -20,15 +20,15 @@ _boolean_ 开启监听模式。
 #### watchOptio 
 _object_ 自定义选项
 
-aggregateTimeout: _number_ 延迟编译的时间，可以避免频繁编译。单位是毫秒  
+_aggregateTimeout_: number 延迟编译的时间，可以避免频繁编译。单位是毫秒  
 ```aggregateTimeout: 300 //默认是300毫秒```
 
-ignored: 忽略对一些文件夹的监听。因为监听大量的文件夹会消耗大量CPU内存，特别是像`node_modules`这样巨大的文件夹。  
+_ignored_: 忽略对一些文件夹的监听。因为监听大量的文件夹会消耗大量CPU内存，特别是像`node_modules`这样巨大的文件夹。  
 `ignored: /node_modules/`  
 也可以使用_anymatch_格式。  
 `ignored: "files/**/*.js`
 
-poll: _boolean/number_ 设置为true或者数字的话，将周期检查文件变化。单位是毫秒  
+_poll_: boolean/number 设置为true或者数字的话，将周期检查文件变化。单位是毫秒  
 `poll: 1000 //每隔一秒钟检查一次` 
 
 #### target 
