@@ -1,3 +1,5 @@
+[文档](https://docs.npmjs.com/getting-started/fixing-npm-permissions)  
+
 ## npm
 
 #### npm init
