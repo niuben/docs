@@ -5,6 +5,9 @@
 ### 实现
 * lib/FlagDependencyUsagePlugin.js 实现将modules中使用过的exports，打包到module中；
 
+## Hot Modules Replace 
+
+
 ## Coding Splitting Libraries
 
 ## Dependency Management
