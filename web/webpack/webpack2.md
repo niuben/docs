@@ -2,6 +2,8 @@
 
 ## Tree-Sharking
 可以将没有import的export代码删除。
+### 实现
+* lib/FlagDependencyUsagePlugin.js 实现将modules中使用过的exports，打包到module中；
 
 ## Coding Splitting Libraries
 
