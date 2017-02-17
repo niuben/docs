@@ -3,6 +3,12 @@
 ### test
 正则，字符串、函数、数组
 
+### 三种类型钩子
+* preloader:
+* loader:
+* postloader:
+
+
 ## html-loader
 默认将模板里面的Img标签，改成require方式。
 
