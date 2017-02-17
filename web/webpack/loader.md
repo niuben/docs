@@ -1,4 +1,8 @@
 #Loader
+## 属性
+### test
+正则，字符串、函数、数组
+
 ## html-loader
 默认将模板里面的Img标签，改成require方式。
 
