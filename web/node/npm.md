@@ -20,3 +20,9 @@
 操作步骤
 * 在模块下创建bin文件夹，编写命令和对应文件路径
 * 执行npm link
+
+### npm owner 
+添加包所有人
+#### npm owner add 
+#### npm owner del
+#### npm owner list
