@@ -59,6 +59,7 @@
 属性值：
  
 
+#### 通过class进行事件绑定
 
 
 
@@ -188,6 +189,11 @@ booealn isMounted()
 
 #### [Unmounting] componentWillUnmount
 
- 
-### dangerouslysetinnerhtml
+## dangerouslysetinnerhtml
 不让react自动转移特殊字符；
+
+ 
+
+
+
+
