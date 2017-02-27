@@ -26,3 +26,7 @@
 #### npm owner add 
 #### npm owner del
 #### npm owner list
+
+### npm view
+#### npm view `packageName` versions 
+查看包历史版本
