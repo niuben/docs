@@ -1,3 +1,4 @@
+JSX转换是通过`babel`工具进行的。
 JSX的标签将转换为`React.createElement(type, config, children)`
 * type: 标签名称;
 * config: 属性配置；
