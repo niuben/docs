@@ -6,3 +6,6 @@
 
 ## webpack-manifest-plugin 
 将静态资源生成清单
+
+## webpack.DefinePlugin
+定义一些环境变量
