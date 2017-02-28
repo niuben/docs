@@ -35,7 +35,8 @@ react.createElement('div', {id: condition ? 'msg': null}, "hello world");
     <div id={id}>hello world</div>
   );
 ```
-为了更多的内联，可以在jsx中定义"immediately-invoked"
+为了更多的内联，可以在jsx中定义`immediately-invoked`函数
+
 ```
 return (
   <section>
@@ -56,14 +57,10 @@ return (
   </section>
 );
 
-
 ```
 
-
 ## Self-Closing标签
-
-
-
+在JSX中，只有`<MyComponent />`是正确的，`<MyComponent>`是错误的。
 
 
 ## JSX扩展属性
