@@ -71,8 +71,11 @@
 	var type = query.split("=")[1];
 	if(type == undefined){
 		location.href = "./index.html"; 	
+	}else{
+		document.title = type;
 	}
 
+	
 	//加载左侧菜单
 	var url = "./web/" + type + "/catalog.json"; 
 	$.get(url, function(msg){
@@ -97,8 +100,7 @@
 		show(catalog);
 
 		//绑定点击事件
-		$(".catalog ul li").click(function(){
-			
+		$(".catalog ul li").click(function(){			
 			$(".catalog ul li").removeClass("on");
 			$(this).addClass("on");
 
