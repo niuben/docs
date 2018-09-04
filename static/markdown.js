@@ -853,8 +853,17 @@ Markdown.dialects.Gruber.inline = {
         m[2] = this.dialect.inline.__call__.call( this, m[2], /\\/ )[0];
 
         var attrs = { alt: m[1], href: m[2] || "" };
-        if ( m[4] !== undefined)
-          attrs.title = m[4];
+        if ( m[4] !== undefined){
+          // attrs.title = m[4];
+          var ss = m[4];
+          if(ss.indexOf("*")>=0){
+            var tmp=ss.split("*");
+            attrs.width = tmp[0];
+            attrs.height = tmp[1];
+          }else{
+            attrs.title = m[4];
+          }
+        }
 
         return [ m[0].length, [ "img", attrs ] ];
       }

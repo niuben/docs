@@ -19,7 +19,7 @@
 
 ### 事件
 
-* success: 
+* success: 
 * error:
 * queen:
 
