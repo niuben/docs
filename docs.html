@@ -59,7 +59,8 @@
 </div>
 
 <script src="static/jquery.js"></script>
-<script src="static/markdown.js"></script>
+<!-- <script src="static/markdown.js"></script> -->
+<script src="static/markdown-it.js"></script>
 <script type="text/javascript">
 	//获取url query。如果没有跳转到首页
 	var query = location.search.substr(1, 100);
@@ -110,14 +111,13 @@
 
 	});
 
-
+	var md = window.markdownit();
 	function show(catalog){
-		var url = "./web/" + type + "/" + catalog + ".md";
+		var url = "./web/" + type + "/" + catalog + ".md";		
 		$.get(url, function(msg){					
-			$(".container").html(markdown.toHTML(msg));
+			$(".container").html(md.render(msg));
 		});
-	}
-	// })
+	}	
 </script>
 </body>
 </html>

@@ -5,8 +5,33 @@
 ### create
 创建一个上传实例；
 
-```
-    webuploader.create()
+```javascript
+WebUploader.create({
+    // swf文件路径
+    swf: '../assets/dist/Uploader.swf',
+    // 文件接收服务端。
+    server: uploadBaseUrl + 'open/?route=upload.feeds',
+    // 选择文件的按钮。可选。
+    // 内部根据当前运行是创建，可能是input元素，也可能是flash.  
+    pick: {
+        id: this.id,
+        multiple: false
+    },
+
+    // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+    resize: false,
+
+    fileVal: 'Filedata',
+
+    duplicate: true,
+        
+    accept: {
+    title: 'Images',
+    extensions: 'jpg,png',
+    mimeTypes: 'image/*'
+    },
+    compress: false            
+});
 ```
 
 
@@ -19,7 +44,7 @@
 
 ### 事件
 
-* success: 
+* success:
 * error:
 * queen:
 
