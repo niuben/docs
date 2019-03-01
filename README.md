@@ -29,19 +29,19 @@
         * 递归        
     * 代码组织
         * 继承
-        * MVC    
+        * MVC
 * 算法    
     * 查找
         * 遍历查找
         * 递归查找
         * 二分查找
-    * 插入        
+    * 插入
     * 删除
-        * 创建新空间;        
+        * 创建新空间
     * 拷贝
         * 浅拷贝
         * 深拷贝
-    * 排序    
+    * 排序
     * 乱序
         * 循环随机
         * Fisher-Yates shuffle
@@ -68,10 +68,10 @@
         * Undefined
         * Null
         * Number
-        * Boolean        
+        * Boolean
         * String
         * Object
-    * 表达式  
+    * 表达式
     * 函数
         * 递归
         * 闭包
