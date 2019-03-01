@@ -53,8 +53,7 @@
     * 最值   
     * 防抖
     * 节流
-    * 扁平
-    * 柯里
+    * 扁平    
 
 * JavaScript
     * 语法
@@ -94,6 +93,7 @@
         * Location
         * History
         * Nagatior
+        * Math
         * FileReader
 
     * 正则
