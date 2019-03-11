@@ -76,7 +76,7 @@ touch和mouse事件区别:
 * touch事件有多个接触点，而mouse事件则只有一个;
 
 touch事件对象:
-* touchevent
-* touchlist
-* touch
+* touchevent: 
+* touchlist:    
+* touch:
 

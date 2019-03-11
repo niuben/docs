@@ -195,7 +195,7 @@
     * 语义化
     * 文档模型
     * meta
-    * viewpoint  
+    * viewpoint 
 * CSS
     * 盒模型     
     * 选择器                
